@@ -13,9 +13,11 @@ from pydantic import BaseModel
 
 app = FastAPI()
 
-# @app.get("/items")
-# async def get_item():
-#     return
+items = []
+
+@app.get("/items")
+async def get_item():
+    return items
 
 class Item(BaseModel):
     name: str
